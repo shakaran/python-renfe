@@ -3,9 +3,8 @@ from lxml import etree
 
 
 class Renfe(object):
-    nucleos = {}
-
     def __init__(self):
+        self.nucleos = {}
         params_config = {'action': 'CONFIG', 'lang': 'ES'}
         api_url = 'http://api.mo2o.com/apps/RenfeApp/'
         config_req = requests.get(api_url, params=params_config)
